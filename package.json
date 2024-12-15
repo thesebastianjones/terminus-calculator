@@ -1,0 +1,27 @@
+{
+  "name": "terminus-calculator",
+  "version": "1.0.0",
+  "description": "A quick calculator to solve the research office puzzle from call of duty: black ops 6, built by StimulusJS.",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw:build": "tailwindcss -i ./asset/input.css -o ./asset/index.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thesebastianjones/terminus-calculator.git"
+  },
+  "author": "Sebastian Jones",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thesebastianjones/terminus-calculator/issues"
+  },
+  "homepage": "https://github.com/thesebastianjones/terminus-calculator#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.22",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
+  }
+}

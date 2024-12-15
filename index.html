@@ -1,0 +1,402 @@
+<!doctype html>
+<html data-theme="retro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./asset/index.css" rel="stylesheet">
+</head>
+<body class="p-4 lg:p-16">
+    <div 
+        data-controller="math-puzzle-calculator"
+        data-math-puzzle-calculator-selected-symbol-value="{&quot;x&quot;:&quot;&quot;,&quot;y&quot;:&quot;&quot;,&quot;z&quot;:&quot;&quot;}"
+        data-action="click->math-puzzle-calculator#selectSymbol"
+    >
+        <div class="flex flex-col lg:grid lg:grid-cols-3 gap-4 mb-4">
+            <div class="flex flex-col gap-6 bg-base-300 p-8 rounded-lg shadow-md">
+                <h2 class="text-5xl lg:text-6xl font-bold text-center">X</h2>
+                <div class="grid grid-cols-3 gap-4">
+                    <div data-variable="x" 
+                        data-symbol="1"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="56" height="56" viewBox="0 0 56 56" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="28" cy="28" r="26" stroke="black" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div data-variable="x" 
+                        data-symbol="2"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="68" height="68" viewBox="0 0 68 68" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="44" cy="24" r="22" stroke="black" stroke-width="4"/>
+                            <circle cx="24" cy="44" r="24" fill="black"/>
+                        </svg>
+                    </div>
+                    <div data-variable="x" 
+                        data-symbol="3"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="48" height="68" viewBox="0 0 48 68" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="22" fill="black" stroke="black" stroke-width="4"/>
+                            <circle cx="24" cy="44" r="22" stroke="black" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div data-variable="x" 
+                        data-symbol="4"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="69" height="69" viewBox="0 0 69 69" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2172 33.2419C41.8518 31.5801 44.7756 28.5516 47.1411 24.4545C49.5066 20.3573 50.6674 16.311 50.7892 13.1985C50.9192 9.87743 49.9104 8.73285 49.4449 8.4641C48.9794 8.19536 47.4838 7.89399 44.6727 9.6671C42.0381 11.3289 39.1143 14.3573 36.7488 18.4545C34.3833 22.5516 33.2224 26.598 33.1006 29.7105C32.9706 33.0315 33.9794 34.1761 34.4449 34.4449C34.9104 34.7136 36.406 35.015 39.2172 33.2419ZM32.4449 37.909C37.2278 40.6704 45.3585 35.542 50.6052 26.4545C55.8519 17.3669 56.2278 7.76142 51.4449 5C46.662 2.23858 38.5314 7.36692 33.2847 16.4545C28.038 25.542 27.662 35.1475 32.4449 37.909Z" fill="black"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2172 59.2228C26.8518 57.5611 29.7756 54.5326 32.1411 50.4354C34.5066 46.3383 35.6674 42.2919 35.7892 39.1795C35.9192 35.8584 34.9104 34.7138 34.4449 34.4451C33.9794 34.1763 32.4838 33.875 29.6727 35.6481C27.0381 37.3098 24.1143 40.3383 21.7488 44.4354C19.3833 48.5326 18.2224 52.5789 18.1006 55.6914C17.9706 59.0125 18.9794 60.1571 19.4449 60.4258C19.9104 60.6946 21.406 60.9959 24.2172 59.2228ZM17.4449 63.8899C22.2278 66.6513 30.3585 61.523 35.6052 52.4354C40.8519 43.3479 41.2278 33.7424 36.4449 30.981C31.662 28.2195 23.5314 33.3479 18.2847 42.4354C13.038 51.523 12.662 61.1285 17.4449 63.8899Z" fill="black"/>
+                            <path d="M26.4545 18.2845C35.542 23.5312 40.6704 31.6618 37.909 36.4447C35.1475 41.2277 25.542 40.8517 16.4545 35.605C7.36692 30.3583 2.23858 22.2277 5 17.4447C7.76142 12.6618 17.3669 13.0378 26.4545 18.2845Z" fill="black"/>
+                            <path d="M52.4354 33.2845C61.523 38.5312 66.6513 46.6618 63.8899 51.4447C61.1285 56.2277 51.523 55.8517 42.4354 50.605C33.3479 45.3583 28.2195 37.2277 30.981 32.4447C33.7424 27.6618 43.3479 28.0378 52.4354 33.2845Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div data-variable="x" 
+                        data-symbol="5"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="69" height="69" viewBox="0 0 69 69" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.2419 29.6725C31.5801 27.0379 28.5516 24.1141 24.4545 21.7486C20.3573 19.3831 16.311 18.2223 13.1985 18.1004C9.87743 17.9704 8.73285 18.9792 8.4641 19.4447C8.19536 19.9102 7.89399 21.4058 9.6671 24.217C11.3289 26.8516 14.3573 29.7754 18.4545 32.1409C22.5516 34.5064 26.598 35.6672 29.7105 35.789C33.0315 35.919 34.1761 34.9102 34.4449 34.4447C34.7136 33.9792 35.015 32.4836 33.2419 29.6725ZM37.909 36.4447C40.6704 31.6618 35.542 23.5312 26.4545 18.2845C17.3669 13.0378 7.76142 12.6618 5 17.4447C2.23858 22.2277 7.36692 30.3583 16.4545 35.605C25.542 40.8517 35.1475 41.2277 37.909 36.4447Z" fill="black"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M59.2228 44.6725C57.5611 42.0379 54.5326 39.1141 50.4354 36.7486C46.3383 34.3831 42.2919 33.2223 39.1795 33.1004C35.8584 32.9704 34.7138 33.9792 34.4451 34.4447C34.1763 34.9102 33.875 36.4058 35.6481 39.217C37.3098 41.8516 40.3383 44.7754 44.4354 47.1409C48.5326 49.5064 52.5789 50.6672 55.6914 50.789C59.0125 50.919 60.1571 49.9102 60.4258 49.4447C60.6946 48.9792 60.9959 47.4836 59.2228 44.6725ZM63.8899 51.4447C66.6513 46.6618 61.523 38.5312 52.4354 33.2845C43.3479 28.0378 33.7424 27.6618 30.981 32.4447C28.2195 37.2277 33.3479 45.3583 42.4354 50.605C51.523 55.8517 61.1285 56.2277 63.8899 51.4447Z" fill="black"/>
+                            <path d="M50.6052 26.4545C45.3585 35.542 37.2278 40.6704 32.4449 37.909C27.662 35.1475 28.038 25.542 33.2847 16.4545C38.5314 7.36692 46.662 2.23858 51.4449 5C56.2278 7.76142 55.8519 17.3669 50.6052 26.4545Z" fill="black"/>
+                            <path d="M35.6052 52.4354C30.3585 61.523 22.2278 66.6513 17.4449 63.8899C12.662 61.1285 13.038 51.523 18.2847 42.4354C23.5314 33.3479 31.662 28.2195 36.4449 30.981C41.2278 33.7424 40.8519 43.3479 35.6052 52.4354Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div data-variable="x" 
+                        data-symbol="6"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="68" height="68" viewBox="0 0 68 68" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M42 19C42 23.9888 40.9314 28.4062 39.3012 31.5035C37.6224 34.6933 35.6495 36 34 36C32.3505 36 30.3776 34.6933 28.6988 31.5035C27.0686 28.4062 26 23.9888 26 19C26 14.0112 27.0686 9.59383 28.6988 6.49646C30.3776 3.30674 32.3505 2 34 2C35.6495 2 37.6224 3.30674 39.3012 6.49646C40.9314 9.59383 42 14.0112 42 19Z" stroke="black" stroke-width="4"/>
+                            <path d="M42 49C42 53.9888 40.9314 58.4062 39.3012 61.5035C37.6224 64.6933 35.6495 66 34 66C32.3505 66 30.3776 64.6933 28.6988 61.5035C27.0686 58.4062 26 53.9888 26 49C26 44.0112 27.0686 39.5938 28.6988 36.4965C30.3776 33.3067 32.3505 32 34 32C35.6495 32 37.6224 33.3067 39.3012 36.4965C40.9314 39.5938 42 44.0112 42 49Z" stroke="black" stroke-width="4"/>
+                            <path d="M49 42C44.0112 42 39.5938 40.9314 36.4965 39.3012C33.3067 37.6224 32 35.6495 32 34C32 32.3505 33.3067 30.3776 36.4965 28.6988C39.5938 27.0686 44.0112 26 49 26C53.9888 26 58.4062 27.0686 61.5035 28.6988C64.6933 30.3776 66 32.3505 66 34C66 35.6495 64.6933 37.6224 61.5035 39.3012C58.4062 40.9314 53.9888 42 49 42Z" fill="black" stroke="black" stroke-width="4"/>
+                            <path d="M19 42C14.0112 42 9.59383 40.9314 6.49646 39.3012C3.30674 37.6224 2 35.6495 2 34C2 32.3505 3.30674 30.3776 6.49646 28.6988C9.59383 27.0686 14.0112 26 19 26C23.9888 26 28.4062 27.0686 31.5035 28.6988C34.6933 30.3776 36 32.3505 36 34C36 35.6495 34.6933 37.6224 31.5035 39.3012C28.4062 40.9314 23.9888 42 19 42Z" fill="black" stroke="black" stroke-width="4"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6 bg-base-300 p-8 rounded-lg shadow-md">
+                <h2 class="text-5xl lg:text-6xl font-bold text-center">Y</h2>
+                <div class="grid grid-cols-3 gap-4">
+                    <div data-variable="y" 
+                        data-symbol="1"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="56" height="56" viewBox="0 0 56 56" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="28" cy="28" r="26" stroke="black" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div data-variable="y" 
+                        data-symbol="2"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="68" height="68" viewBox="0 0 68 68" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="44" cy="24" r="22" stroke="black" stroke-width="4"/>
+                            <circle cx="24" cy="44" r="24" fill="black"/>
+                        </svg>
+                    </div>
+                    <div data-variable="y" 
+                        data-symbol="3"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="48" height="68" viewBox="0 0 48 68" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="22" fill="black" stroke="black" stroke-width="4"/>
+                            <circle cx="24" cy="44" r="22" stroke="black" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div data-variable="y" 
+                        data-symbol="4"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="69" height="69" viewBox="0 0 69 69" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2172 33.2419C41.8518 31.5801 44.7756 28.5516 47.1411 24.4545C49.5066 20.3573 50.6674 16.311 50.7892 13.1985C50.9192 9.87743 49.9104 8.73285 49.4449 8.4641C48.9794 8.19536 47.4838 7.89399 44.6727 9.6671C42.0381 11.3289 39.1143 14.3573 36.7488 18.4545C34.3833 22.5516 33.2224 26.598 33.1006 29.7105C32.9706 33.0315 33.9794 34.1761 34.4449 34.4449C34.9104 34.7136 36.406 35.015 39.2172 33.2419ZM32.4449 37.909C37.2278 40.6704 45.3585 35.542 50.6052 26.4545C55.8519 17.3669 56.2278 7.76142 51.4449 5C46.662 2.23858 38.5314 7.36692 33.2847 16.4545C28.038 25.542 27.662 35.1475 32.4449 37.909Z" fill="black"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2172 59.2228C26.8518 57.5611 29.7756 54.5326 32.1411 50.4354C34.5066 46.3383 35.6674 42.2919 35.7892 39.1795C35.9192 35.8584 34.9104 34.7138 34.4449 34.4451C33.9794 34.1763 32.4838 33.875 29.6727 35.6481C27.0381 37.3098 24.1143 40.3383 21.7488 44.4354C19.3833 48.5326 18.2224 52.5789 18.1006 55.6914C17.9706 59.0125 18.9794 60.1571 19.4449 60.4258C19.9104 60.6946 21.406 60.9959 24.2172 59.2228ZM17.4449 63.8899C22.2278 66.6513 30.3585 61.523 35.6052 52.4354C40.8519 43.3479 41.2278 33.7424 36.4449 30.981C31.662 28.2195 23.5314 33.3479 18.2847 42.4354C13.038 51.523 12.662 61.1285 17.4449 63.8899Z" fill="black"/>
+                            <path d="M26.4545 18.2845C35.542 23.5312 40.6704 31.6618 37.909 36.4447C35.1475 41.2277 25.542 40.8517 16.4545 35.605C7.36692 30.3583 2.23858 22.2277 5 17.4447C7.76142 12.6618 17.3669 13.0378 26.4545 18.2845Z" fill="black"/>
+                            <path d="M52.4354 33.2845C61.523 38.5312 66.6513 46.6618 63.8899 51.4447C61.1285 56.2277 51.523 55.8517 42.4354 50.605C33.3479 45.3583 28.2195 37.2277 30.981 32.4447C33.7424 27.6618 43.3479 28.0378 52.4354 33.2845Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div data-variable="y" 
+                        data-symbol="5"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="69" height="69" viewBox="0 0 69 69" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.2419 29.6725C31.5801 27.0379 28.5516 24.1141 24.4545 21.7486C20.3573 19.3831 16.311 18.2223 13.1985 18.1004C9.87743 17.9704 8.73285 18.9792 8.4641 19.4447C8.19536 19.9102 7.89399 21.4058 9.6671 24.217C11.3289 26.8516 14.3573 29.7754 18.4545 32.1409C22.5516 34.5064 26.598 35.6672 29.7105 35.789C33.0315 35.919 34.1761 34.9102 34.4449 34.4447C34.7136 33.9792 35.015 32.4836 33.2419 29.6725ZM37.909 36.4447C40.6704 31.6618 35.542 23.5312 26.4545 18.2845C17.3669 13.0378 7.76142 12.6618 5 17.4447C2.23858 22.2277 7.36692 30.3583 16.4545 35.605C25.542 40.8517 35.1475 41.2277 37.909 36.4447Z" fill="black"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M59.2228 44.6725C57.5611 42.0379 54.5326 39.1141 50.4354 36.7486C46.3383 34.3831 42.2919 33.2223 39.1795 33.1004C35.8584 32.9704 34.7138 33.9792 34.4451 34.4447C34.1763 34.9102 33.875 36.4058 35.6481 39.217C37.3098 41.8516 40.3383 44.7754 44.4354 47.1409C48.5326 49.5064 52.5789 50.6672 55.6914 50.789C59.0125 50.919 60.1571 49.9102 60.4258 49.4447C60.6946 48.9792 60.9959 47.4836 59.2228 44.6725ZM63.8899 51.4447C66.6513 46.6618 61.523 38.5312 52.4354 33.2845C43.3479 28.0378 33.7424 27.6618 30.981 32.4447C28.2195 37.2277 33.3479 45.3583 42.4354 50.605C51.523 55.8517 61.1285 56.2277 63.8899 51.4447Z" fill="black"/>
+                            <path d="M50.6052 26.4545C45.3585 35.542 37.2278 40.6704 32.4449 37.909C27.662 35.1475 28.038 25.542 33.2847 16.4545C38.5314 7.36692 46.662 2.23858 51.4449 5C56.2278 7.76142 55.8519 17.3669 50.6052 26.4545Z" fill="black"/>
+                            <path d="M35.6052 52.4354C30.3585 61.523 22.2278 66.6513 17.4449 63.8899C12.662 61.1285 13.038 51.523 18.2847 42.4354C23.5314 33.3479 31.662 28.2195 36.4449 30.981C41.2278 33.7424 40.8519 43.3479 35.6052 52.4354Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div data-variable="y" 
+                        data-symbol="6"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="68" height="68" viewBox="0 0 68 68" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M42 19C42 23.9888 40.9314 28.4062 39.3012 31.5035C37.6224 34.6933 35.6495 36 34 36C32.3505 36 30.3776 34.6933 28.6988 31.5035C27.0686 28.4062 26 23.9888 26 19C26 14.0112 27.0686 9.59383 28.6988 6.49646C30.3776 3.30674 32.3505 2 34 2C35.6495 2 37.6224 3.30674 39.3012 6.49646C40.9314 9.59383 42 14.0112 42 19Z" stroke="black" stroke-width="4"/>
+                            <path d="M42 49C42 53.9888 40.9314 58.4062 39.3012 61.5035C37.6224 64.6933 35.6495 66 34 66C32.3505 66 30.3776 64.6933 28.6988 61.5035C27.0686 58.4062 26 53.9888 26 49C26 44.0112 27.0686 39.5938 28.6988 36.4965C30.3776 33.3067 32.3505 32 34 32C35.6495 32 37.6224 33.3067 39.3012 36.4965C40.9314 39.5938 42 44.0112 42 49Z" stroke="black" stroke-width="4"/>
+                            <path d="M49 42C44.0112 42 39.5938 40.9314 36.4965 39.3012C33.3067 37.6224 32 35.6495 32 34C32 32.3505 33.3067 30.3776 36.4965 28.6988C39.5938 27.0686 44.0112 26 49 26C53.9888 26 58.4062 27.0686 61.5035 28.6988C64.6933 30.3776 66 32.3505 66 34C66 35.6495 64.6933 37.6224 61.5035 39.3012C58.4062 40.9314 53.9888 42 49 42Z" fill="black" stroke="black" stroke-width="4"/>
+                            <path d="M19 42C14.0112 42 9.59383 40.9314 6.49646 39.3012C3.30674 37.6224 2 35.6495 2 34C2 32.3505 3.30674 30.3776 6.49646 28.6988C9.59383 27.0686 14.0112 26 19 26C23.9888 26 28.4062 27.0686 31.5035 28.6988C34.6933 30.3776 36 32.3505 36 34C36 35.6495 34.6933 37.6224 31.5035 39.3012C28.4062 40.9314 23.9888 42 19 42Z" fill="black" stroke="black" stroke-width="4"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6 bg-base-300 p-8 rounded-lg shadow-md">
+                <h2 class="text-5xl lg:text-6xl font-bold text-center">Z</h2>
+                <div class="grid grid-cols-3 gap-4">
+                    <div data-variable="z" 
+                        data-symbol="1"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="56" height="56" viewBox="0 0 56 56" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="28" cy="28" r="26" stroke="black" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div data-variable="z" 
+                        data-symbol="2"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="68" height="68" viewBox="0 0 68 68" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="44" cy="24" r="22" stroke="black" stroke-width="4"/>
+                            <circle cx="24" cy="44" r="24" fill="black"/>
+                        </svg>
+                    </div>
+                    <div data-variable="z" 
+                        data-symbol="3"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="48" height="68" viewBox="0 0 48 68" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="22" fill="black" stroke="black" stroke-width="4"/>
+                            <circle cx="24" cy="44" r="22" stroke="black" stroke-width="4"/>
+                        </svg>
+                    </div>
+                    <div data-variable="z" 
+                        data-symbol="4"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="69" height="69" viewBox="0 0 69 69" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2172 33.2419C41.8518 31.5801 44.7756 28.5516 47.1411 24.4545C49.5066 20.3573 50.6674 16.311 50.7892 13.1985C50.9192 9.87743 49.9104 8.73285 49.4449 8.4641C48.9794 8.19536 47.4838 7.89399 44.6727 9.6671C42.0381 11.3289 39.1143 14.3573 36.7488 18.4545C34.3833 22.5516 33.2224 26.598 33.1006 29.7105C32.9706 33.0315 33.9794 34.1761 34.4449 34.4449C34.9104 34.7136 36.406 35.015 39.2172 33.2419ZM32.4449 37.909C37.2278 40.6704 45.3585 35.542 50.6052 26.4545C55.8519 17.3669 56.2278 7.76142 51.4449 5C46.662 2.23858 38.5314 7.36692 33.2847 16.4545C28.038 25.542 27.662 35.1475 32.4449 37.909Z" fill="black"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2172 59.2228C26.8518 57.5611 29.7756 54.5326 32.1411 50.4354C34.5066 46.3383 35.6674 42.2919 35.7892 39.1795C35.9192 35.8584 34.9104 34.7138 34.4449 34.4451C33.9794 34.1763 32.4838 33.875 29.6727 35.6481C27.0381 37.3098 24.1143 40.3383 21.7488 44.4354C19.3833 48.5326 18.2224 52.5789 18.1006 55.6914C17.9706 59.0125 18.9794 60.1571 19.4449 60.4258C19.9104 60.6946 21.406 60.9959 24.2172 59.2228ZM17.4449 63.8899C22.2278 66.6513 30.3585 61.523 35.6052 52.4354C40.8519 43.3479 41.2278 33.7424 36.4449 30.981C31.662 28.2195 23.5314 33.3479 18.2847 42.4354C13.038 51.523 12.662 61.1285 17.4449 63.8899Z" fill="black"/>
+                            <path d="M26.4545 18.2845C35.542 23.5312 40.6704 31.6618 37.909 36.4447C35.1475 41.2277 25.542 40.8517 16.4545 35.605C7.36692 30.3583 2.23858 22.2277 5 17.4447C7.76142 12.6618 17.3669 13.0378 26.4545 18.2845Z" fill="black"/>
+                            <path d="M52.4354 33.2845C61.523 38.5312 66.6513 46.6618 63.8899 51.4447C61.1285 56.2277 51.523 55.8517 42.4354 50.605C33.3479 45.3583 28.2195 37.2277 30.981 32.4447C33.7424 27.6618 43.3479 28.0378 52.4354 33.2845Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div data-variable="z" 
+                        data-symbol="5"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="69" height="69" viewBox="0 0 69 69" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.2419 29.6725C31.5801 27.0379 28.5516 24.1141 24.4545 21.7486C20.3573 19.3831 16.311 18.2223 13.1985 18.1004C9.87743 17.9704 8.73285 18.9792 8.4641 19.4447C8.19536 19.9102 7.89399 21.4058 9.6671 24.217C11.3289 26.8516 14.3573 29.7754 18.4545 32.1409C22.5516 34.5064 26.598 35.6672 29.7105 35.789C33.0315 35.919 34.1761 34.9102 34.4449 34.4447C34.7136 33.9792 35.015 32.4836 33.2419 29.6725ZM37.909 36.4447C40.6704 31.6618 35.542 23.5312 26.4545 18.2845C17.3669 13.0378 7.76142 12.6618 5 17.4447C2.23858 22.2277 7.36692 30.3583 16.4545 35.605C25.542 40.8517 35.1475 41.2277 37.909 36.4447Z" fill="black"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M59.2228 44.6725C57.5611 42.0379 54.5326 39.1141 50.4354 36.7486C46.3383 34.3831 42.2919 33.2223 39.1795 33.1004C35.8584 32.9704 34.7138 33.9792 34.4451 34.4447C34.1763 34.9102 33.875 36.4058 35.6481 39.217C37.3098 41.8516 40.3383 44.7754 44.4354 47.1409C48.5326 49.5064 52.5789 50.6672 55.6914 50.789C59.0125 50.919 60.1571 49.9102 60.4258 49.4447C60.6946 48.9792 60.9959 47.4836 59.2228 44.6725ZM63.8899 51.4447C66.6513 46.6618 61.523 38.5312 52.4354 33.2845C43.3479 28.0378 33.7424 27.6618 30.981 32.4447C28.2195 37.2277 33.3479 45.3583 42.4354 50.605C51.523 55.8517 61.1285 56.2277 63.8899 51.4447Z" fill="black"/>
+                            <path d="M50.6052 26.4545C45.3585 35.542 37.2278 40.6704 32.4449 37.909C27.662 35.1475 28.038 25.542 33.2847 16.4545C38.5314 7.36692 46.662 2.23858 51.4449 5C56.2278 7.76142 55.8519 17.3669 50.6052 26.4545Z" fill="black"/>
+                            <path d="M35.6052 52.4354C30.3585 61.523 22.2278 66.6513 17.4449 63.8899C12.662 61.1285 13.038 51.523 18.2847 42.4354C23.5314 33.3479 31.662 28.2195 36.4449 30.981C41.2278 33.7424 40.8519 43.3479 35.6052 52.4354Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div data-variable="z" 
+                        data-symbol="6"
+                        class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 rounded-lg cursor-pointer transition-colors [&.selected]:ring-4 [&.selected]:ring-blue-500 w-full py-4"
+                    >
+                        <svg width="68" height="68" viewBox="0 0 68 68" class="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M42 19C42 23.9888 40.9314 28.4062 39.3012 31.5035C37.6224 34.6933 35.6495 36 34 36C32.3505 36 30.3776 34.6933 28.6988 31.5035C27.0686 28.4062 26 23.9888 26 19C26 14.0112 27.0686 9.59383 28.6988 6.49646C30.3776 3.30674 32.3505 2 34 2C35.6495 2 37.6224 3.30674 39.3012 6.49646C40.9314 9.59383 42 14.0112 42 19Z" stroke="black" stroke-width="4"/>
+                            <path d="M42 49C42 53.9888 40.9314 58.4062 39.3012 61.5035C37.6224 64.6933 35.6495 66 34 66C32.3505 66 30.3776 64.6933 28.6988 61.5035C27.0686 58.4062 26 53.9888 26 49C26 44.0112 27.0686 39.5938 28.6988 36.4965C30.3776 33.3067 32.3505 32 34 32C35.6495 32 37.6224 33.3067 39.3012 36.4965C40.9314 39.5938 42 44.0112 42 49Z" stroke="black" stroke-width="4"/>
+                            <path d="M49 42C44.0112 42 39.5938 40.9314 36.4965 39.3012C33.3067 37.6224 32 35.6495 32 34C32 32.3505 33.3067 30.3776 36.4965 28.6988C39.5938 27.0686 44.0112 26 49 26C53.9888 26 58.4062 27.0686 61.5035 28.6988C64.6933 30.3776 66 32.3505 66 34C66 35.6495 64.6933 37.6224 61.5035 39.3012C58.4062 40.9314 53.9888 42 49 42Z" fill="black" stroke="black" stroke-width="4"/>
+                            <path d="M19 42C14.0112 42 9.59383 40.9314 6.49646 39.3012C3.30674 37.6224 2 35.6495 2 34C2 32.3505 3.30674 30.3776 6.49646 28.6988C9.59383 27.0686 14.0112 26 19 26C23.9888 26 28.4062 27.0686 31.5035 28.6988C34.6933 30.3776 36 32.3505 36 34C36 35.6495 34.6933 37.6224 31.5035 39.3012C28.4062 40.9314 23.9888 42 19 42Z" fill="black" stroke="black" stroke-width="4"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div 
+            class="bg-base-300 p-8 rounded-lg shadow-md"
+        >
+            <div 
+                data-math-puzzle-calculator-target="result"
+                class="hidden"
+            >
+                <div class="flex flex-col lg:grid lg:grid-cols-3 gap-4">
+                    <div class="bg-base-content rounded-lg p-4 flex md:flex-col justify-between items-center gap-6 text-base-300">
+                        <span class="text-2xl lg:text-3xl font-bold">Code 1</span>
+                        <span 
+                            data-math-puzzle-calculator-target="code1"
+                            class="text-3xl lg:text-6xl font-bold"
+                        ></span>
+                    </div>
+                    <div class="bg-base-content rounded-lg p-4 flex md:flex-col justify-between items-center gap-6 text-base-300">
+                        <span class="text-2xl lg:text-3xl font-bold">Code 2</span>
+                        <span 
+                            data-math-puzzle-calculator-target="code2"
+                            class="text-3xl lg:text-6xl font-bold"
+                        ></span>
+                    </div>
+                    <div class="bg-base-content rounded-lg p-4 flex md:flex-col justify-between items-center gap-6 text-base-300">
+                        <span class="text-2xl lg:text-3xl font-bold">Code 3</span>
+                        <span 
+                            data-math-puzzle-calculator-target="code3"
+                            class="text-3xl lg:text-6xl font-bold"
+                        ></span>
+                    </div>
+                </div>
+            </div>
+            <div data-math-puzzle-calculator-target="resultInstructions">
+                <div class="flex justify-center mt-4 bg-base-content rounded-lg">
+                    <p class="lg:text-lg font-bold text-center px-4 lg:px-32 py-4 w-full text-base-300">
+                        Choose the symbols from your sticky notes and match them with X, Y, and Z to reveal your codes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module">
+    import { Application, Controller } from "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js";
+    window.Stimulus = Application.start();
+
+    Stimulus.register("math-puzzle-calculator", class extends Controller {
+        static targets = [
+            "result",
+            "resultInstructions",
+            "code1",
+            "code2",
+            "code3",
+        ]
+
+        static values = {
+            selectedSymbol: { 
+                type: Object, 
+                default: {
+                    x: "",
+                    y: "",
+                    z: "",
+                },
+            },
+        }
+
+        SYMBOLS = {
+            1: 0,
+            2: 11,
+            3: 10,
+            4: 22,
+            5: 21,
+            6: 20,
+        }
+
+        selectedSymbolValueChanged(value) {
+            console.log("selectedSymbolValueChanged", value);
+
+            // update selected state of the elements
+            this.updateSymbolStates();
+
+            // if all symbols are selected, calculate the result
+            if (Object.values(this.selectedSymbolValue).every(symbol => symbol !== "")) {
+                this.calculate();
+            } else {
+                this.resetResult();
+            }
+        }
+
+        updateSymbolStates() {
+            // remove all selected classes
+            this.element.querySelectorAll(".selected").forEach(element => {
+                element.classList.remove("selected");
+            });
+
+            // loop through the selectedSymbolValue and update the state of the elements
+            Object.entries(this.selectedSymbolValue).forEach(([variable, symbol]) => {
+                const symbolElement = this.element.querySelector(`[data-variable="${variable}"][data-symbol="${symbol}"]`);
+                if (symbolElement) {
+                    symbolElement.classList.toggle("selected", symbol !== "");
+                }
+            });
+        }
+
+        calculate() {
+            console.log("calculating");
+
+            const x = this.SYMBOLS[this.selectedSymbolValue.x];
+            const y = this.SYMBOLS[this.selectedSymbolValue.y];
+            const z = this.SYMBOLS[this.selectedSymbolValue.z];
+
+            console.log("x", x);
+            console.log("y", y);
+            console.log("z", z);
+
+            if (x === "" || y === "" || z === "") {
+                this.updateResult("", "", "");
+                return;
+            }
+
+            // Calculate using the three equations
+            const code1 = (2 * x) + 11;
+            const code2 = ((2 * z) + y) - 5;
+            const code3 = Math.abs((y + z) - x);
+
+            console.log("code1", code1);
+            console.log("code2", code2);
+            console.log("code3", code3);
+
+            this.updateResult(code1, code2, code3);
+        }
+
+        updateResult(code1, code2, code3) {
+            console.log("updateResult", code1, code2, code3);
+
+            // if the codes are not numbers, reset the result
+            if (isNaN(code1) || isNaN(code2) || isNaN(code3)) {
+                this.resetResult();
+                return;
+            }
+
+            this.code1Target.textContent = code1;
+            this.code2Target.textContent = code2;
+            this.code3Target.textContent = code3;
+            this.showResult();
+        }
+
+        selectSymbol(event) {
+            console.log("selecting symbol");
+
+            // get the symbol element
+            const symbolElement = event.target.closest("[data-variable][data-symbol]");
+            if (!symbolElement) {
+                return;
+            }
+
+            const variable = symbolElement.dataset.variable;
+            const symbol = symbolElement.dataset.symbol;
+
+            console.log(variable, symbol);
+
+            if (!symbol || !variable) {
+                return;
+            }
+
+            // deselect the symbol if it is already selected
+            if (this.selectedSymbolValue[variable] === symbol) {
+                this.selectedSymbolValue = {
+                    ...this.selectedSymbolValue,
+                    [variable]: ""
+                };
+                return;
+            }
+
+            // select the symbol
+            this.selectedSymbolValue = {
+                ...this.selectedSymbolValue,
+                [variable]: symbol
+            };
+        }
+
+        showResult() {
+            this.resultTarget.classList.remove("hidden");
+            this.resultInstructionsTarget.classList.add("hidden");
+        }
+
+        resetResult() {
+            this.code1Target.textContent = "";
+            this.code2Target.textContent = "";
+            this.code3Target.textContent = "";
+            this.resultTarget.classList.add("hidden");
+            this.resultInstructionsTarget.classList.remove("hidden");
+        }
+    });
+</script>
+</html>
